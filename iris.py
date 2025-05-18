@@ -35,6 +35,14 @@ predictions = clf.predict(data_test)
 print(f'result:{predictions}')
 print(f'answer:{target_test}')
 
+# Show loss curve
+plt.plot(clf.loss_curve_)
+plt.title('Loss Curve')
+plt.xlabel('Iteration')
+plt.ylabel('Loss')
+plt.grid()
+plt.show()
+
 # Show Confusion Matrix
 conf_matrix = confusion_matrix(target_test, predictions)
 sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues',
@@ -42,12 +50,4 @@ sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues',
 plt.title('Confusion Matrix')
 plt.xlabel('Predicted')
 plt.ylabel('Actual')
-plt.show()
-
-# Show loss curve
-plt.plot(clf.loss_curve_)
-plt.title('Loss Curve')
-plt.xlabel('Iteration')
-plt.ylabel('Loss')
-plt.grid()
 plt.show()
