@@ -55,3 +55,63 @@ python iris.py
 
 ・補足
 データセットは 80% を訓練用、20% をテスト用に分割しています
+
+------English------
+
+Iris Flower Classification using MLPClassifier
+This project implements a simple neural network using scikit-learn's MLPClassifier to classify Iris flower species based on their features. It includes model training, evaluation, and visualization of performance.
+
+・Dataset
+The Iris dataset from sklearn.datasets is used, which contains
+
+150 samples
+
+4 features per sample
+
+Petal length (cm)
+
+Petal width (cm)
+
+Sepal length (cm)
+
+Sepal width (cm)
+
+3 classes
+
+Setosa
+
+Versicolor
+
+Virginica
+
+・Model
+A Multi-layer Perceptron (MLP) classifier is used:
+
+One hidden layer with 10 neurons
+
+Activation function: ReLU
+
+Optimizer: Adam
+
+iterations: 1000
+
+・Requirements
+Make sure you have the following libraries installed:
+pip install numpy pandas matplotlib seaborn scikit-learn
+
+・How to Run
+Please copy and paste the following code into the terminal.
+python iris.py
+Replace iris.py with your script filename.
+
+・Output
+Train Accuracy – The accuracy of the model on the training set.
+
+Predicted vs Actual Labels – A printout of the model predictions compared to actual values from the test set.
+
+Loss Curve – A plot showing the decrease in loss function during training.
+
+Confusion Matrix – A heatmap that visualizes the model's performance.
+
+・Notes
+The model is trained using 80% of the data and tested on the remaining 20%.
